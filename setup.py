@@ -52,7 +52,7 @@ extensions = [
 
 setup(
     name="UniParse",
-    version=0.1,
+    version="0.1",
     description="Universal graph based dependency parsing prototype framework",
     long_description=README,
     author="Daniel Varab",
@@ -62,6 +62,7 @@ setup(
     cmdclass={"build_ext": build_ext},
     ext_modules=cythonize(extensions),
     entry_points={"console_scripts": ["uniparse=uniparse.cli:main"]},
+    packages=["uniparse", "uniparse.backend", "uniparse.decoders", "uniparse.evaluate", "uniparse.models"]
 )
 
 # remove c and build folder
